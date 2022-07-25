@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas Akhir</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styleTA.css">
+	<script type="text/javascript" src="kodeTA.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h1 style="font-size: 50px;">Quiz Tugas Akhir</h1>
+	</div>
+	<div class="navbar">
+	  <a href="index.html">Home</a>
+	  <a href="lihatTA.php">Tabel Nilai</a>
+	</div>
+	<div class="mainbar">
+			<div class="main">
+				<p>Petunjuk Quiz:<br> - Peserta akan disediakan kalkulator dalam quiz ini pada menu di sebelah kanan.<br> - Untuk menggunakan kalkulator, cukup lakukan operasi aritmatika pada text box lalu tekan Hitung.<br> - Soal yang diberikan adalah pilihan ganda, kerjakan seluruh soal sebelum menekan tombol Submit.<br> - Untuk melompat ke soal tertentu, silahkan gunakan List Soal pada menu di sebelah kanan<br> - Jangan lupa mengisi Nama, NIM, dan Email</p>
+				<div class="form">
+					<div>Data Mahasiswa:</div>
+					<div><br></div>
+					<form name="form1" method="post" action="prosesTA.php">
+					<div>Nama</div>
+					<div><input type="text" name="nama"></div>
+					<div><br></div>
+					<div>NIM</div>
+					<div><input type="text" name="nim"></div>
+					<div><br></div>
+					<div>Email</div>
+					<div><input type="text" name="email"></div>
+					<div><br></div>
+					<div><input type="hidden" name="score" id="scores" value="0"></div>
+				</div>
+				<div><br></div>
+				<a id="1"></a>
+				<div class="form">
+					<div>Soal 1</div>
+					<div>Berapakah hasil pemfaktoran dari bilangan 16x<sup>2</sup> - 9y<sup>2</sup>?</div>
+					<div>
+						<input type="radio" name="a1" id="a1t">( 4x + 3y ) ( 4x – 3y )<br>
+						<input type="radio" name="a1" id="a1">( 4x - 3y ) ( 4x – 3y )<br>
+						<input type="radio" name="a1" id="a1">( 4x - 3y ) ( 4x + 3y )<br>
+						<input type="radio" name="a1" id="a1">( 4x + 3y ) ( 4x + 3y )<br>
+					</div>
+				</div>
+				<div><br></div>
+				<a id="2"></a>
+				<div class="form">
+					<div>Soal 2</div>
+					<div>Berapakah nilai dari 8x + 9y - 2z jika x = 1, y = 2, z = 3?</div>
+					<div>
+						<input type="radio" name="a2" id="a2">18<br>
+						<input type="radio" name="a2" id="a2t">20<br>
+						<input type="radio" name="a2" id="a2">22<br>
+						<input type="radio" name="a2" id="a2">24<br>
+					</div>
+				</div>
+				<div><br></div>
+				<a id="3"></a>
+				<div class="form">
+					<div>Soal 3</div>
+					<div>Sebuah kotak berisi ada 6 jenis bola. Dari 6 bola itu ada 3 bola sepak, 2 bola basket, dan 1 bola voli. Jika jika bola-bola itu disusun teratur dalam sebaris, berapakah banyak susunan yang bisa dibuat?</div>
+					<div>
+						<input type="radio" name="a3" id="a3">20<br>
+						<input type="radio" name="a3" id="a3">40<br>
+						<input type="radio" name="a3" id="a3t">60<br>
+						<input type="radio" name="a3" id="a3">80<br>
+					</div>
+				</div>
+				<div><br></div>
+				<a id="4"></a>
+				<div class="form">
+					<div>Soal 4</div>
+					<div>Budi ingin membeli 5 potong roti di sebuah toko yang menjual 8 jenis roti berbeda. Di antara kelima itu, Budi sudah menentukan 2 roti yang akan dipilihnya, berapa banyak kombinasi roti yang mungkin dibeli oleh Budi?</div>
+					<div>
+						<input type="radio" name="a4" id="a4t">20<br>
+						<input type="radio" name="a4" id="a4">40<br>
+						<input type="radio" name="a4" id="a4">60<br>
+						<input type="radio" name="a4" id="a4">80<br>
+					</div>
+				</div>
+				<div><br></div>
+				<a id="5"></a>
+				<div class="form">
+					<div>Soal 5</div>
+					<div>Nilai stasioner dari f(x) = x<sup>2</sup> - 4x adalah...</div>
+					<div>
+						<input type="radio" name="a5" id="a5">4<br>
+						<input type="radio" name="a5" id="a5">2<br>
+						<input type="radio" name="a5" id="a5">-2<br>
+						<input type="radio" name="a5" id="a5t">-4<br>
+					</div>
+				</div>
+				<div><br></div>
+				<div>
+					<div>*Pastikan data dan seluruh jawaban pada soal telah diisi sebelum menekan submit</div>
+					
+					<input type="submit" name="Submit" value="Submit" onclick="score2();">
+					</form>
+				</div>
+			</div>
+			<div class="side">
+				<div>
+					Kalkulator
+					<input style="width: 100%" type="text" id="kalk">
+					<input type="submit" name="count" value="Hitung" onclick="hitung();">
+					<input type="reset" name="bersih" value="Bersihkan" onclick="bersihkan();">
+				</div>
+				<div><br></div>
+				<div>
+					List Soal
+					<div class="list">
+	  					<a href="#1">1</a><a href="#2">2</a><a href="#3">3</a><a href="#4">4</a><a href="#5">5</a>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="footer">
+		<p style="text-align: center; color: white">Copyright &#169; Adnan Fauzan Usman 2100018185</p>
+	</div>
+</body>
+</html>

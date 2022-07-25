@@ -1,0 +1,77 @@
+.header {
+	padding: 30px;
+	text-align: center;
+	color: white;
+	background: url(header-bg.jpg);
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #1D1C1A;
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+.navbar a:hover {
+	color: black;
+	background-color: #FAF8F6;
+}
+
+.mainbar {
+	display: flex;
+	height: 70vh;
+}
+
+.main {
+	background-color: white;
+	flex: 80%;
+	padding: 10px;
+	overflow-y: scroll;
+}
+.side {
+	background-color: #3E4879;
+	flex: 20%;
+	padding: 30px;
+	color: white;
+	text-align: center;
+}
+
+.list {
+	overflow: hidden;
+	
+}
+
+.list a {
+	float: left;
+	display: block;
+	width: 10px;
+	border: 1px solid #FFFFFF;
+	color: white;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: #1D1C1A;
+	text-decoration: none;
+}
+.list a:hover {
+	color: black;
+	background-color: #FAF8F6;
+}
+
+.form {
+	border: 1px solid black;
+	padding: 20px 10px;
+	width: 80%;
+}
+
+.footer {
+	width: 100%;
+	height: 40px;
+	float: left;
+	background-color: #1D1C1A;
+}
